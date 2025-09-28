@@ -6,7 +6,7 @@ navToggle.addEventListener('click', ()=>{
   navLinks.style.display = expanded ? 'none' : 'flex';
 });
 
-// SMOOTH SCROLL برای لینک‌های داخلی
+// SMOOTH SCROLL 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click', e=>{
     const href = a.getAttribute('href');
@@ -14,6 +14,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
       e.preventDefault();
       const el = document.querySelector(href);
       if(el) el.scrollIntoView({behavior:'smooth'});
+      // hide mobile nav after click
+      if(window.innerWidth <= 768) navLinks.style.display = 'none';
     }
   })
 });
@@ -40,12 +42,12 @@ const projects = [
 
 const projectList = document.getElementById('projectList');
 function renderProjects(){
-projectList.innerHTML = '';
-projects.forEach(p=>{
-const card = document.createElement('article');
-card.className = 'project-card';
-card.innerHTML = `\n <h3>${p.title}</h3>\n <p>${p.desc}</p>\n <div class="project-links">\n <a href="${p.repo}" target="_blank" rel="noopener">display on GitHub</a>\n </div>`;
-projectList.appendChild(card);
-})
+  projectList.innerHTML = '';
+  projects.forEach(p=>{
+    const card = document.createElement('article');
+    card.className = 'project-card';
+    card.innerHTML = `\n <h3>${p.title}</h3>\n <p>${p.desc}</p>\n <div class="project-links">\n <a href="${p.repo}" target="_blank" rel="noopener">display on GitHub</a>\n </div>`;
+    projectList.appendChild(card);
+  });
 }
 renderProjects();
