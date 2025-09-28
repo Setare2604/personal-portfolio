@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio — Fatemeh Hojjaty Shargh</title>
-    <meta name="description" content="Personal Portfolio Fatemeh — Programmer / ...">
+    <meta name="description" content="Personal Portfolio Fatemeh — Programmer, projects and contact.">
+    <meta property="og:title" content="Fatemeh Hojjaty Shargh — Portfolio">
+    <meta property="og:description" content="Programmer with mathematics background — projects, experience and contact.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- NAVBAR -->
-    <header class="site-header">
-      <nav class="navbar">
+    <header class="site-header" role="banner">
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <a class="brand" href="#">Fatemeh Hojjaty Shargh</a>
-        <button class="nav-toggle" aria-label="open/close menu">☰</button>
-        <ul class="nav-links">
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+        <ul id="primary-navigation" class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -23,16 +28,17 @@
       </nav>
     </header>
     <!-- HERO / HOME -->
-    <section id="home" class="hero">
-      <div class="hero-inner">
-        <img src="assets/images/profile.jpg" alt="Profile photo" class="profile-pic">
-        <h1>Hi! I'm <span class="name">Fatemeh</span></h1>
-        <p class="subtitle">Programmer</p>
-        <a class="cta" href="#projects">View projects</a>
-      </div>
-    </section>
+    <main id="main">
+      <section id="home" class="hero">
+        <div class="hero-inner">
+          <img src="assets/images/profile.jpg" alt="Profile photo" class="profile-pic">
+          <h1>Hi! I'm <span class="name">Fatemeh</span></h1>
+          <p class="subtitle">Programmer</p>
+          <a class="cta" href="#projects">View projects</a>
+        </div>
+      </section>
     <!-- ABOUT -->
-    <section id="about" class="about">
+    <section id="about" class="about container">
       <h2>about me</h2>
       <p>Coming from a mathematics background, I bring a strong analytical mindset to programming. I thrive on solving complex problems and developing efficient algorithms. I am a fast learner, eager to apply my skills to meaningful projects.</p>
       <a class="cv-link" href="assets/Resume.pdf" target="_blank" rel="noopener">
@@ -49,20 +55,19 @@
       </ul>
     </section>
     <!-- PROJECTS -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects container">
       <h2>Projects</h2>
-      <div class="project-list" id="projectList">
-        <script src="script.js"></script>
-      </div>
+      <div class="project-list" id="projectList"></div>
     </section>
     
     <!-- CONTACT -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact container">
       <h2>Contact me</h2>
       <ul class="contact-list">
         <li>
           📧 Email: 
           <a href="mailto:fhojjaty00@gmail.com">fhojjaty00@gmail.com</a>
+          <button id="copyEmail" class="inline-btn" aria-label="Copy email to clipboard">Copy</button>
         </li>
         <li>
           💻 GitHub: 
@@ -78,6 +83,12 @@
         </li>
       </ul>
     </section>
+  </main>
 
+  <footer class="site-footer container">
+    <p>© 2025 Fatemeh Hojjaty Shargh</p>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
