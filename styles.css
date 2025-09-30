@@ -237,18 +237,45 @@ html { scroll-padding-top: 70px; }
 }
 
 /* ======== SECTIONS ======== */
-section {padding: 3.5rem 0;}
+section {padding: 4.5rem 0;}
 .container { max-width: var(--container-width); margin: 0 auto; padding: 0 1.25rem; }
 section:nth-of-type(even) {
   background: rgba(0,0,0,0.02); 
 }
 
 h2 {
-  margin-bottom: 1.25rem; 
+  margin-bottom: 1.5rem;
+  margin-top: 1.25rem 
 }
   
 .about p, .experience ul, .contact ul { color: var(--muted); font-size: 1.05rem; line-height: 1.75; }
+.about .skills ul,
+.about .interests ul {
+  list-style: disc;
+  padding-left: 2rem; 
+  margin: 1rem 0 1.5rem 0; 
+}
 
+.about .skills li,
+.about .interests li {
+  margin-bottom: 0.8rem; 
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.6;
+  position: relative;
+}
+.about h3 {
+  margin: 2rem 0 1rem 0; 
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+  
+.about .personal-info,
+.about .interests,
+.about .skills {
+  margin-bottom: 2rem; 
+}
 /* ======== EXPERIENCE ======== */
 .experience.container {
   max-width: var(--container-width); 
@@ -256,7 +283,7 @@ h2 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.skills-grid {
+.background-grid {
   list-style: disc;
   padding-left: 1.1rem;        
   margin: 0.5rem 0 0 0;       
@@ -265,24 +292,37 @@ h2 {
   gap: 0.75rem 2rem;          
   align-items: start;
   max-width: 900px;           
-}  
-@media (max-width: 700px) {
-  .skills-grid {
-    grid-template-columns: 1fr; 
-  }
 }
-.skills-grid li {
-  margin: 0 0 0.6rem 0;  
+.experience-item {
+  margin-bottom: 2.5rem; 
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.5);
+  border-radius: 8px;
+  border-left: 4px solid var(--brand);
+}
+  
+.experience-item h4 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+  
+.experience-item .company,
+.experience-item .institution,
+.experience-item .duration {
+  margin-bottom: 0.5rem;
   color: var(--muted);
-  font-size: 1.03rem;    
-  line-height: 1.6;
-  background: rgba(255,255,255,0.0); 
-  padding-left: 0.25rem;
+  font-style: italic;
 }
-.skills-grid li::marker {
-  color: var(--brand);
-  font-weight: 600;
+  
+.experience-item ul {
+  padding-left: 1.5rem; 
+  margin-top: 1rem;
 }
+  
+.experience-item li {
+  margin-bottom: 0.5rem; 
+}  
+
 /* ======== PROJECTS ======== */
 .project-list {
   margin-top: 1rem;
@@ -322,8 +362,8 @@ h2 {
 }
   
 /* ======== CONTACT ======== */
-.contact-list{ list-style: none; padding: 0; }
-.contact-list li{ margin-bottom: .8rem; }
+.contact-list{ list-style: none; padding: 0;}
+.contact-list li{ margin-bottom: 0.8rem; padding-left: 0.5rem;}
 .contact-list a{ color: var(--brand); text-decoration: none; }
 .inline-btn{
   margin-left: .5rem;
@@ -337,7 +377,7 @@ h2 {
 .inline-btn:focus{ outline: 3px solid var(--focus-color); outline-offset: 3px; }  
 
 /* ===== Footer ===== */
-.site-footer{ padding: 1.5rem 0; text-align: center; color: var(--muted); border-top: 1px solid rgba(0,0,0,0.04); font-size: 0.9rem; letter-spacing: 0.3px;}
+.site-footer{ padding: 2rem 0; text-align: center; color: var(--muted); border-top: 1px solid rgba(0,0,0,0.04); font-size: 0.9rem; letter-spacing: 0.3px;}
 
 /* ===== Focus states for keyboard users ===== */
 a:focus, button:focus, .project-card:focus{
