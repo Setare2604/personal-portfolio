@@ -1,10 +1,10 @@
 :root{
   --bg: #f9f9f9;
   --text: #222;
-  --brand: #227aff;
+  --brand: #6a81a2;
   --muted: #555;          
-  --focus-color: #0a5b81; 
-  --accent: #124a9e90;
+  --focus-color: #abc8e7f1; 
+  --accent: #0d2695e4;
   --container-width: 900px;
 }
 
@@ -87,7 +87,7 @@ a {
   padding-left: 0;
 }
 .nav-toggle{
-  display: none; /* shown on mobile by media query */
+  display: none; 
   background: none;
   border: none;
   color: #fff;
@@ -150,7 +150,7 @@ html { scroll-padding-top: 70px; }
   display:flex;
   align-items:center;
   justify-content:center;
-  background: linear-gradient(135deg, #60e0ff 3%, #1ea6ff 60%);
+  background: linear-gradient(135deg, #608dff 3%, #b2c9dd 60%);
   text-align:center;
   padding: 3rem 1rem;
   color: #081424;
@@ -182,7 +182,7 @@ html { scroll-padding-top: 70px; }
 }
   
 .hero h1 {
-  font-size: clamp(1.8rem, 3.2vw, 2.6rem); /* responsive */
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem); 
   line-height: 1.05;
   margin: 0.15rem 0 0.2rem;
   font-weight: 800;
@@ -190,7 +190,7 @@ html { scroll-padding-top: 70px; }
   text-shadow: 0 1px 0 rgba(255,255,255,0.06);
 }
 .hero .name { 
-  background: linear-gradient(90deg, #07085b 0%, #0e2cc2ee 60%);
+  background: linear-gradient(90deg, #07085b 0%, #192d93ee 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -199,8 +199,8 @@ html { scroll-padding-top: 70px; }
   margin: 0.4rem 0 1rem;
   font-size: 1.5rem;
   color: rgba(4,20,30,0.6);
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
   
 .cta {
@@ -291,7 +291,7 @@ h2 {
   gap: 1rem;
 }
 .project-card{
-  background: #fff;
+  background: #d7e9f5f7;
   padding: 1.2rem;
   border-radius: 12px;
   box-shadow:  0 2px 8px rgba(0,0,0,0.1);
@@ -308,17 +308,17 @@ h2 {
 .project-card h3{ margin-bottom: .5rem; color: var(--accent); font-size: 1.15rem; font-weight: 600; }
 .project-card p {
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* NEW */
+  -webkit-line-clamp: 4; 
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
   
 .project-links a {
-  display:inline-block; /* NEW */
-  margin-top: .5rem; /* NEW */
+  display:inline-block; 
+  margin-top: .5rem; 
   color: var(--brand);
-  padding: .25rem .3rem; /* NEW */
-  border-radius:6px; /* NEW */
+  padding: .25rem .3rem; 
+  border-radius:6px; 
 }
   
 /* ======== CONTACT ======== */
