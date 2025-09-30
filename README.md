@@ -37,7 +37,7 @@
 1. کلون کردن ریپازیتوری:
 git clone git clone https://github.com/Setare2604/personal-portfolio.git
 2. رفتن به پوشه پروژه:
-cd portfolio
+cd project1
 
 3. باز کردن در مرورگر:
 فایل index.html را در هر مرورگر مدرن باز کنید.
